@@ -1,4 +1,4 @@
-Programa de sandwich:
+algoritmo de sandwich
 
 entrada
 
@@ -28,10 +28,32 @@ guardar gata y llave de curz
 salida
 rueda cambiada
 
-algoritmo cambiar codigo
+algoritmo cambiar pañales
 
 entrada
-correo de registro
+pañal, mudador, toallas humeda y crema
+
+proceso
+veo si se paso SI: entrada: buscar nueva muda de ropa
+no
+procedemos a acomodar al bebe en el mudador
+despues sacamos pañal sucio.
+limpiamos y echamos crema
+ponemos el pañal limpio
+se viste el bebe
+
+salida
+
+cambio de pañal listo
+
+
+
+algoritmo cambiar contraseña email
+
+entrada
+correo de registro para cambiar clave
+
+procesos
 
 si esta correcto seguir
 si no lo recuerda:
@@ -51,4 +73,6 @@ Introducir de nuevo
 
 Validada
 
+
+salida
 Dar mensaje y pedir loguearse
