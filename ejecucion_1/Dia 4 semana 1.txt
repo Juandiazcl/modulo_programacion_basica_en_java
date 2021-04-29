@@ -1,0 +1,54 @@
+Programa de sandwich:
+
+entrada
+
+Pan- lechuga-mayonesa-mostaza-tomata
+
+cortar el pan. calentar el pan si quiere
+rellenar con ingrediente
+sandwich listo
+
+algoritmo cambiar rueda
+
+entrada:
+rueda de repuesto - llave de rueda - chaleco reflextante
+
+proceso.
+poner topes en ruedas en buen estado.
+soltar tuercas con llave de cruz
+acomodar gata en lugar plano y seguro.
+levantar auto con gata
+soltar tuercas
+poner rueda de repuesto
+apretar tuercas
+bajar gata con cuidado
+apretar tuercas con toda la fuerza.
+guardar gata y llave de curz
+
+salida
+rueda cambiada
+
+algoritmo cambiar codigo
+
+entrada
+correo de registro
+
+si esta correcto seguir
+si no lo recuerda:
+Se le pide ingresar su celular se dice que mandara un sms y q debe ingresar el código
+
+Se le da 2 minutos
+
+No salida
+Si sigue
+ Entrada nva clave
+
+Debe ser alfanumérica con una mayúscula
+
+No Val
+ida 
+Introducir de nuevo
+
+Validada
+
+Dar mensaje y pedir loguearse
