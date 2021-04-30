@@ -1,0 +1,185 @@
+algoritmo compra en sitio de internet
+
+entrada:
+
+medio de pago, internet
+
+
+procesos
+
+entramos a buscador para buscar producto deseado.
+seleccionamos la opcion
+ingresamos al sitio web de la opcion
+vemos caracteristicas, referencias, recomendaciones
+si me gustan
+ingreso producto a carro de compra
+sino
+salgo y repito la busqueda.
+termino la compra ingresando al carro de compra
+ingreso mis datos o me logueo si ya estoy registrado el sitio
+ingreso la direccion de despacho, y me indica el horario de entrega (puedo elegir entre entrega o retiro en tienda)
+realizo el pago con mi forma de pago
+si pago ok
+se compra y me muestra una pantalla y me llega un email y boleta de pago
+sino
+me reenvia a la pagina para realizarlo de nuevo.
+fin
+
+
+
+
+salida:
+
+compra ok
+
+algoritmo 
+
+
+entrada
+mediodepago=char
+internet=bolean
+
+proceso
+entramos a buscador para buscar producto deseado.
+seleccionamos la opcion
+ingresamos al sitio web de la opcion
+sitio=string
+vemos caracteristicas, referencias, recomendaciones
+si me gustan
+ingreso producto a carro de compra
+sino
+salgo y repito la busqueda.
+termino la compra ingresando al carro de compra
+ingreso mis datos o me logueo si ya estoy registrado el sitio
+nombre=string
+direccion=string
+comuna=char
+region=int
+pais=string
+correo=string
+observacion=string
+ingreso la direccion de despacho, y me indica el horario de entrega (puedo elegir entre entrega o retiro en tienda)
+pregunto si es con despacho o retiro en tienda
+opcion=bolean
+si opcion=false 
+sigue
+sino
+direcdespy=bolean
+direcdesp=string
+pregunto si la direccion de despacho=direccion del cliente
+si direcdesp=true
+direcdesp=direccion
+sigo
+sino
+ingresar direccion de despacho
+direcdesp
+fin si
+fin proceso
+
+realizo el pago con mi forma de pago
+mediodepago=char
+pagook=bolean
+si pago ok=true
+se compra y me muestra una pantalla y me llega un email y boleta de pago
+numped=int
+sino
+me reenvia a la pagina para realizarlo de nuevo.
+fin
+
+
+
+
+salida:
+
+compra ok
+numped
+
+
+algotirmo liquidacion de sueldo
+
+entrada
+variables
+nombre=string
+rut=string
+cargo=string
+afp=string
+ssalud=string
+porcafp=float
+porssalud=float
+sueldo=long
+horasext=int
+valorhext=double
+bonocolac=int
+bonomov=int
+cargfam=int
+valorcf=double
+falor
+
+proceso
+selecciona empleado ingresando rut
+valorentra=sueldo+(horasext*valorhext)+bonocolac+bonomov+(cargfam*valorcf)
+valordesc=(sueldo*porcafp)+(sueldo*porssalud)
+valorliq=valorentra-valodesc
+
+salida
+
+nombre
+rut
+afp
+porcafp
+ssalud
+porssalud
+sueldo
+numero horas extras = horasext
+valor x horas extras= horasext*valorhext
+bono de colacion =bonocolac
+bono de movilizacion=bonomov
+carga de familiares=cargfam
+monto x cargas familiares=cargfam*valorcf
+monto ingresos
+monto de descuentos valordesc
+liquido a pagar valorliq
+
+
+algoritmo boleta electronica
+
+
+variables
+
+NUMERO BOLETA
+Nombreemisor=string
+giro emisor=string
+rutemis=string
+rutemp=string
+direccion emisor=string
+valor=long
+valorliq=float
+constante
+mondescbol=float
+
+
+proceso
+ingreso de rut de empresa 
+ingreso de rut de persona y monto de  la boleta de honorario, detalle
+valorliq=valor-mondesbol
+
+salida
+boleta lista
+nombreemisor
+rutemis
+rutemp
+neto valor
+descuento mondescbol
+total valorliq
+
+
+
+
+
+
+
+
+
+
+
+
