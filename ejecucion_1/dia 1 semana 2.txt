@@ -1,0 +1,87 @@
+ejec 1
+
+pensar en dos problemáticas las cuales podemos resolver aplicando tecnología
+analizar y definir 3 requerimientos funcionales y determinar todas las variables y constantes que
+pueden existir dentro de esos requerimientos para luego desarrollar el algoritmo para
+cada uno de estos
+
+Problema 1:  Jornada Trabajo Freelance
+Requerimientos Funcionales: 
+Internet, 
+medio tecnológico de conectividad (celular,pc,notebook,etc.),
+datos personales,
+escritorio 
+audifono
+Materiales de trabajo 
+Luz eléctrica 
+Sitio Web 
+
+
+Variables:       
+Tiempo de conectividad=string
+conexión internet=bolean
+medio tecnológico=string
+Requerimientos del empleador=string 
+Sueldo=long
+Datos Personales=string
+
+Constantes: 	Horas Hombres definidas por contrato=int
+		Labores a desarrollar en el trabajo=string
+		
+		
+
+Algoritmo:
+Ingresar a sitio web e iniciar sesión con los datos personales 
+Dirigirse a sala de trabajo 
+Cumplir horario de reloj establecido 
+Esperar requerimientos de clientes y  empleador 
+Desconectarse e ingresar en los horarios establecidos (colación, break, salida)
+
+salida: 
+jornada de trabajadores en un día.
+
+Problema 2: Jornada Clases online
+
+Requerimientos Funcionales:
+
+1:Luz ambiental o artificial
+2:conexión a internet
+3:escritorios
+4: microfono y audifono
+5: materiales de trabajo 
+6: Datos de Acceso
+
+Variables: 
+Tiempo de ejecución de la clase=int
+material de trabajo disponible=string
+tema de la clase=string
+Número de alumnos=int
+Datos de acceso=char
+
+
+Constantes: 
+Sitio web=string
+Horario=char
+Código de la clase=char
+
+Algoritmo:
+	-Acceder al sitio web
+	-Logear con datos de acceso
+ 	-Ingresar a sala virtual
+	-Realizar actividades en el horario asignado
+	-deslogear
+
+salida:
+
+Jornada lograda en la sala virtual (estar presente y lograr el objetivo de aprendizaje del día.	
+
+
+ingreso 2 numeros
+
+inicio
+num1=int
+num2=int
+escribe "ingrese dos numeros: " 
+leer num1, num 2
+escribe "numeros ingresados: ", num1, num2
+fin
