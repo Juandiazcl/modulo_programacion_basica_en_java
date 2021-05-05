@@ -1,0 +1,127 @@
+Algoritmos
+
+determinar si numero es par o impar
+
+Inicio
+Num=long
+Escribe "ingresa un número"
+Leer num
+Si num%2 =0
+Escribir "Es par"
+Ese
+Escribe "Es impar"
+Fin si
+Fin
+
+determinar multiplo de 2
+
+Ejercicio 2
+Inicio
+Num=int
+Escribe "Escribe número:"
+Leer num
+Ir num% 2 =0
+Escribir "Es múltiplo de 2"
+Ese
+Escribe "No es múltiplo de 2"
+Fin si
+Fin
+
+determinar multiplo de 3
+
+
+Ejercicio 3
+Inicio
+Num=int
+Escribe "Escribe número:"
+Leer num
+Ir num%3 =0
+Escribir "Es múltiplo de 3"
+Ese
+Escribe "No es múltiplo de 3"
+Fin si
+Fin
+
+determinar numero mayor entre 2 numeros.
+
+Inicio
+Num=int
+Num2=int
+Escribe "Escribe números:"
+Leer num, num2
+Si num>num2 entonces
+Escribir num, "Es mayor que", num2
+Ese
+Escribir num2, "Es mayor que", num
+Fin si
+Fin
+
+
+ Que permita determinar si la suma de dos números ingresados es positiva, negativa o cero.
+Inicio
+Num=int
+Num2=int
+Escribe "Escribe números para sumar:"
+Leer num, num2
+Si num+num2>0  entonces
+Escribir "suma es positiva"
+sino
+si num+num2=0  entonces
+Escribir "suma=0"
+sino
+Escribir "suma es negativa"
+fin si
+Fin si
+Fin
+
+2. Que indique si un número es divisible por 2 y por 5 al mismo tiempo.}
+
+Inicio
+Num=int
+Escribe "Escribe número:"
+Leer num
+si num%2 ==0 y num%5==0
+Escribir "numero es divisible en 2 y 5"
+sino
+Escribe "numero no es divisible en 2 y 5"
+Fin si
+Fin
+
+3. Que permita determinar cuál es mayor de 3 números ingresados.
+Inicio
+Num=int
+Num2=int
+num3=int
+Escribe "Escribe 3 números:"
+Leer num, num2, num 3
+Si num>num2 y num>num3 entonces
+  Escribir  "numero mayor", num
+  sino
+       si num2>num3
+             Escribir "numero mayor", num2
+            sino
+        escribir "numero mayor", num3
+      Fin si
+fin si
+Fin
+
+Ingresar 2 numeros y elegir operacion
+
+Inicio
+Num=int
+Num2=int
+operacion=char
+Escribe "Escribe 2 números y operacion (+,-, X;/):"
+Leer num, num2, operacion
+Segun
+si  operacion="+"
+  Escribir  "suma de ", num, "+",num, " = "+num+num2
+si  operacion="-"
+  Escribir  "resta de ", num, "-",num, " = "+num-num2
+si  operacion="x"
+  Escribir  "multiplicacion de ", num, "x",num, " = "+num*num2
+ si  operacion="/"
+  Escribir  "division de ", num, "/",num, " = "+num/num2
+fin segun
+Fin
+

@@ -1,0 +1,96 @@
+algoritmo suma 2 numeros
+
+variables
+entero num1, num2, suma
+inicio
+escribir "Introduzca primer número (entero): "
+leer num1
+escribir "Introduzca segundo número (entero): "
+leer num2
+suma = num1+num2
+Escribir "El resultado de la suma es: ", suma
+
+fin
+
+Programa rentabilidad
+
+Inicio
+Variables
+Montoinv=float
+Constantes
+Porcrent=2
+Escribe "ingrese el monto para invertir",montoinv
+Montoinv=montoinv*(porcrent*0,01)
+Escribe "Tu monto con una rentabilidad de 2% es", montoinv
+Fin
+
+Ingresar y mostrar datos
+Inicio
+Var
+Marca=string
+Modelo=string
+Escribe "Escribe la marca y modelo de tu auto:",
+Leer marca, modelo
+Escribe " Sus datos son:", marca, modelo
+Fin
+
+Porcentaje
+
+Inicio
+Var
+Num=float
+Porc=int
+Res=float
+Escribe "Escribe el numero y el porcentaje deseado:",
+Leer num, porc
+Res=num*(porc*0,01)
+Escribe " El porcentaje del número ingresado", res
+Fin
+
+Ejercicio 3
+Comisiones
+
+Inicio
+Costante
+Porccoms=int
+Var
+Sbase=long
+Vta1=long
+Vta2=long
+Vta3=long
+Comisiones=long
+Escribe "Escribe el sueldo:",
+Leer sbase
+Escribe "Anota los montos de tus ventas:"
+Leer vta1,vta2,vta3
+Comision=vta1*(porccoms*0,01)+vta2*(porccoms*0,01)+vta3*(porccoms*0,01)
+Escribe " La comision de este mes es", comisión
+Escribe " Tu sueldo más la comision de este mes es", comision+sbase
+Fin
+
+inicio
+varcam=int
+a=int
+b=int
+escribe "escribe a y b"
+leer a,b
+varcam=A
+a=b
+b=varcam
+a=(A+B)-A
+b=(b+a)-B
+escribe "cambiados" , a, b
+fin
+
+si endulzar=endulzante
+si endulzar=sucralosa
+sucralosa
+sino
+stevia
+fin si
+
+sino
+
+endulzar=azucar
+
+fin si
