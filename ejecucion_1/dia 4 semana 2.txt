@@ -1,0 +1,91 @@
+Inicio
+I=int
+Para i=1 a 100
+Escribir i
+Fin para
+Fin
+
+Inicio
+I=0
+J=0
+Sumar=0
+Escribe "ingrese cantidad de números a ingresar:"
+Leer i
+Mientras I<=j
+Si i %==0
+Sumar=sumar+i
+Fin si
+I=i+1
+Fin mientras
+Fin
+
+Inicio
+I=0
+J=0
+Sumar=0
+Escribe "ingrese cantidad de números a ingresar:"
+Leer i
+Mientras I<=j
+Si i %==0
+Sumar=sumar+i
+Fin si
+I=i+1
+Fin mientras
+Fin
+
+Inicio
+I=0
+J=0
+Sumapp=0
+Cp=0
+Cim=0
+Sumari=0
+Escribe "ingrese cantidad de números a ingresar:"
+Leer j
+Mientras I<=j
+Leer
+Si i %==0
+Sumapp=sumapp+1
+Cp++
+sino
+Sumari=sumari1
+Cim++
+Fin si
+I=i+1
+Fin mientras
+Fin
+
+Inicio
+I=0
+J=0
+Sumapp=0
+Num=0
+Numant=0
+Cp=0
+Cim=0
+Sumari=0
+Escribe "ingrese cantidad de números a ingresar:"
+Leer J
+Mientras I<=j
+Escribe i+1
+Leer num
+Si num>numant
+numant=num
+Fin si
+Si num%==0
+Sumapp=sumapp+num
+Cp++
+sino
+Sumari=sumari1*num
+Cim++
+Fin si
+I=i+1
+num=0
+Fin mientras
+Si cp>como
+Escribe "Se ingreso más números pares"+cp
+sino
+Escribe "Se ingreso más números impares"+cim
+Fin si
+Escribe "El número mayor ingresado es"+cp
+Fin
