@@ -1,0 +1,81 @@
+Algoritmo chismaphone
+Imprimir "ingrese duracion de llamada"
+Leer duracionLLamada
+Segun (duracionLLamada)
+duracionLLamada <= 5| duracionLLamada == 5 hacer:
+costoFinal=duracionLLamada*100
+duracionLLamada>5&duracionLLamada<=8 hacer:
+costoFinal=((duracionLLamada-5)*80)+500
+duracionLLamada>8&duracionLLamada<=10 hacer:
+costoFinal=((duracionLLamada-8)*70)+740
+duracionLLamada<10 hacer:
+costoFinal=((duracionLLamada-10)*50)+880
+FinSegun
+imprimir "ingrese fecha y hora de la llamada"
+leer fechayhora
+si(fechayhora=="domingo")
+costoFinal=costoFinal*1.03
+fin si
+si(fechayhora=="diahabil"&fechayhora=="turnoMatutino")
+costoFinal=costoFinal*1.15
+fin si
+si(fechayhora=="diahabil"&fechayhora=="turnoMatutino")
+costoFinal=costoFinal*1.1
+fin si
+Imprimir "el costo final de la llamada es" costoFinal
+
+FinAlgoritmo
+
+
+costo de bus
+inicio
+cantidadp=0
+costofinal=0
+tipo=""
+Imprimir "ingrese cantidad de personas: (debe ser superior a 20 personas"
+Leer cantidadp
+si cantidadp<20
+cantidadp=20
+fin si
+Imprimir "tipo de autobus: (A,b,c) y num. de km recorridos:"
+Leer tipoau,km
+para i=1a cantidadp hacer
+Segun (tipoau)
+tipoau == "A"hacer:
+costoFinal=costofinal*(200*km)
+tipoau == "b"hacer:
+costoFinal=costofinal*(250*km)
+tipoau == "c"hacer:
+costoFinal=costofinal*(300*km)
+FinSegun
+fin para
+imprimir "costo viaje final: ", costofinal
+imprimir "costo viaje final por persona: ", costofinal/cantidadp
+FinAlgoritmo
+
+el naufrago satisfecho
+
+inicio
+cantidadH=0
+costofinal=0
+tipoH=""
+FP=""
+Imprimir "seleccione su hamburguesa (s=sencilla, D=doble, t=triple) y la forma de pago (c=CREDITO, E=EFECTIVO, D=DEBITO) :"
+Leer tipoH,FP
+Imprimir "INGRESE CANTIDAD DE hamburguesa:"
+LEER CANTIDADH
+Segun (tipoH)
+tipoH== "S"hacer:
+costoFinal=2000*CANTIDADH
+tipoH== "D"hacer:
+costoFinal=2500*CANTIDADH
+tipoH == "T"hacer:
+costoFinal=2800*CANTIDADH
+FinSegun
+
+IF FP=="c"
+COSTOFINAL=COSTOFINAL+(COSTOFINAL*0.05)
+FIN SI
+imprimir "TOTAL COMPRA HAMBURGUESA final: ", costofinal
+
+FinAlgoritmo
