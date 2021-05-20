@@ -1,3 +1,4 @@
+package cajerografico2;
 import javax.swing.JOptionPane;
 
 /*
@@ -11,7 +12,7 @@ import javax.swing.JOptionPane;
 * @author Madeus
 */
 public class cajerografico2 {
-
+    
 /**
 * @param args the command line arguments
 */
