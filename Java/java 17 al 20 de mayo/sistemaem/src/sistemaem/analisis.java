@@ -11,20 +11,39 @@ package sistemaem;
  * @author Hola
  */
 public class analisis {
-    String ciudad;
-    String comuna;
+    private String ciudad;
+    private String comuna;
     
   /*  public void setCiudad(String ciudadi);{
-    this.ciudad=ciudadi;
-}*/
-    public analisis(String ciudadi, String comunai){
-        this.ciudad=ciudadi;
-        this.comuna=comunai;
-        if (this.ciudad=="SANTIAGO")
+    this.ciudad=ciudadi; */
+public void setCiudad(String ciudad){
+    this.ciudad=ciudad;
+}
+public void setComuna(String comuna){
+    this.comuna=comuna;
+}
+public String getCiudad(){
+           return this.ciudad; }
+public String getComuna(){
+           return this.comuna; }
+   
+
+
+public analisis(String ciudad){
+        
+        if (ciudad.equals("SANTIAGO"))
             System.out.println("Es de la región metropolitana.");
         else
             System.out.println("No es de la región metropolitana.");
     }
-  
-    
+    public int distanTraslado(String comuna){
+        int min;
+        if (comuna.equals("PROVIDENCIA")){
+            min=30;
+            return min;
+        }
+        else {
+            min=90;
+            return min;}          
+    }
 }
