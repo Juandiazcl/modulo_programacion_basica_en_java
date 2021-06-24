@@ -1,0 +1,27 @@
+create database pruebadb character set utf8;
+
+use pruebadb;
+
+create table primeraTabla(
+id_primeraT int auto_increment,
+nombre varchar(20),
+estatura float,
+fechaNacimiento date,
+descripcion text,
+primary key(id_primeraT)
+
+);
+
+alter table primeraTabla add column edad integer;
+
+create table EMPLEADO (
+id_primeraT int auto_increment,
+nombre varchar(20),
+sueldo double,
+rut varchar(10),
+primary key(id_primeraT)
+);
+
+alter table primeratabla drop column descripcionprimeratabla;
+
+drop table empleado;

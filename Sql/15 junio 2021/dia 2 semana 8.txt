@@ -1,0 +1,10 @@
+SELECT * FROM bdvideojuegos.cliente;
+use bdvideojuegos;
+
+create view fichaCli2 as select nombre, fono, email from cliente;
+
+create view fichaPro as select nombrePro, marca, preVenta from producto;
+
+select nombrePro, marca, preVenta from producto where precompra > (select avg(precompra) from producto);
+
+select cliente.nombre, pedidos.idpedido, pedidos.cantidad, pedidos.preVta, pedidos.totalVta from cliente inner join pedidos on cliente.idCliente=pedidos.idCliente;

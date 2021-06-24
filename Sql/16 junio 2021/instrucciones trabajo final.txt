@@ -1,0 +1,99 @@
+IINGRESO CANAL
+
+INSERT INTO `bdrymas`.`canal` (`idCanal`, `idCliente`, `nomTienda`, `numTrabajadores`, `direccion`, `email`) VALUES ('2', '2', 'b2c', '1', 'Santa Isabel 412', 'ventas@rymas.cl');
+
+INSERT INTO `bdrymas`.`canal` (`idCanal`, `idCliente`, `nomTienda`, `numTrabajadores`, `direccion`, `email`) VALUES ('3', '3', 'b2b', '1', 'Santa Isabel 412', 'gerencia@rymas.cl');
+
+INSERT INTO `bdrymas`.`canal` (`idCanal`, `idCliente`, `nomTienda`, `numTrabajadores`, `direccion`, `email`) VALUES ('4', '4', 'Rappi', '1', 'Santa Isabel 412', 'x');
+
+INSERT INTO `bdrymas`.`canal` (`idCanal`, `idCliente`, `nomTienda`, `numTrabajadores`, `direccion`, `email`) VALUES ('5', '5', 'Pedidos ya', '1', 'Santa Isabel 412', 'x');
+
+INGRESO CLIENTES
+
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('1', 'Sebastian monsalve', '11111111-1', 'Coihue 990', 'La Florida', 'smonsalve@gmail.com', 'P', '89900999', '1', '2');
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('2', 'Jazmin Campo', '11111111-1', 'San Francisco 325 dep 503', 'Santiago', 'jcampos@gmail.com', 'P', '912345678', '2', '2');
+
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('3', 'Leonel Araya', '1111111-1', 'Lira 300 dep. 725', 'Santiago', 'laraya@gmail.com', 'P', '912345678', '3', '2');
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('4', 'Claudio Fuentes', '11111111-1', 'Maria Ines 10800', 'La Florida', 'cfuentes@gmail.com', 'P', '912345678', '4', '2');
+
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('5', 'Cesar Huaquil', '11111111-1', 'Ereuterio Ramirez 800 dep 409', 'Santiago', 'chuaquil@gmail.com', 'P', '912345678', '5', '2');
+
+INSERT INTO `bdrymas`.`cliente` (`idCliente`, `nombre`, `rut`, `direccion`, `comuna`, `email`, `canal`, `fono`, `numPedido`, `idTienda`) VALUES ('6', 'Jaime Sanchez', '11111111-1', 'Morori 10240', 'La Florida', 'jsanchez@gmail.com', 'W', '912345678', '6', '1');
+
+INGRESO PEDIDOS
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('1', '1', '1', 'Whisky Highland Queen', '1', '6990', '6990', '2021/06/17');
+NSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('2', '3', '2', 'Licor cafe Moshaco', '1', '5990', '5990', '2021-06-20');
+
+IINSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('3', '3', '3', 'Licor Moshaco maracuya', '1', '5990', '5990', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('4', '2', '4', 'Chocolate carenero', '2', '1390', '2780', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('5', '2', '4', 'Chocolate Sur de Lago', '2', '1390', '2780', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('6', '2', '4', 'Chocolate Rio Caribe', '2', '1390', '2780', '2021-06-20');
+NSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('7', '4', '3', 'Licor Moshaco maracuya', '1', '5990', '5990', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('8', '4', '4', 'Chocolate carenero', '2', '1390', '2780', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('9', '4', '5', 'Chocolate Sur de Lago', '2', '1390', '2780', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('10', '4', '6', 'Chocolate Rio Caribe', '2', '1390', '2780', '2021-06-20');
+'
+
+INGRESO BODEGA
+
+INSERT INTO `bdrymas`.`bodega` (`idMovimiento`, `idProducto`, `stock`, `preCosto`, `totMovimeinto`, `idProveedor`, `tipoMov`, `idPedido`, `fecMovimeinto`) VALUES ('1', '1', '21', '4000', '84000', '1', 'E', '01', '2021/06/17');
+INSERT INTO `bdrymas`.`bodega` (`idMovimiento`, `idProducto`, `stock`, `preCosto`, `totMovimeinto`, `idProveedor`, `tipoMov`, `idPedido`, `fecMovimeinto`) VALUES ('2', '2', '120', '3000', '360000', '2', 'E', '10000002', '2021-06-17');
+
+UPDATE `bdrymas`.`bodega` SET `idPedido` = '10000001' WHERE (`idMovimiento` = '1');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('2', '3', '2', 'Licor cafe Moshaco', '1', '5990', '5990', '2021-06-20');
+
+INSERT INTO `bdrymas`.`pedidos` (`idPedido`, `idCliente`, `idproducto`, `producto`, `cantidad`, `preVta`, `totalVta`, `fechaPed`) VALUES ('3', '3', '3', 'Licor Moshaco maracuya', '1', '5990', '5990', '2021-06-20');
+
+ingreso productos
+
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('1', 'Whisky Highland Queen', 'Whisky escocés', 'Highland', '4000', '6990', '2', '21', '1');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('2', 'Licor Moshaco café', 'Licor peruano', 'Moshaco', '3000', '6990', '10', '120', '2');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('3', 'Licor Moshaco maracuyá', 'Licor peruano', 'Moshaco', '3000', '6990', '10', '120', '2');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('4', 'Chocolate Carenero 60% cacao 80g', 'Chocolate venezolano', 'Franceschi', '650', '1390', '5', '5', '1');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('5', 'Chocolate Sur de Lago 60% cacao 80g', 'Chocolate venezolano', 'Franceschi', '650', '1390', '5', '5', '1');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('6', 'Chocolate Rio caribe 60% cacao 80g', 'Chocolate venezolano', 'Franceschi', '650', '1390', '5', '5', '1');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('7', 'Vino Rose', 'vino Chileno', 'Carmen', '1700', '3590', '2', '5', '3');
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('8', 'Box Regalo 1 Vino y 2 choc', 'Pack personalizado regalo', 'Rymas', '5000', '10990', '2', '5', '4');
+
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('9', 'Box Regalo 1 Whisky y 2 choc', 'Pack personalizado regalo', 'Rymas', '5000', '10990', '2', '5', '4');
+
+INSERT INTO `bdrymas`.`producto` (`idProducto`, `nombrePro`, `descripcion`, `marca`, `preCompra`, `preVenta`, `stockCritico`, `stockActual`, `idProveedor`) VALUES ('10', 'Box Regalo 1 Licor y 2 choc', 'Pack personalizado regalo', 'Rymas', '5000', '10990', '2', '5', '4');
+
+ingreso proveedores
+
+INSERT INTO `bdrymas`.`proveedores` (`idProveedor`, `idProducto`, `preCosto`, `cantidad`, `idBodega`, `totalCompra`) VALUES ('1', '1', '4000', '21', '1', '84000');
+NSERT INTO `bdrymas`.`proveedores` (`idProveedor`, `idProducto`, `preCosto`, `cantidad`, `idBodega`, `totalCompra`) VALUES ('2', '2', '3000', '120', '1', '360000');
+INSERT INTO `bdrymas`.`proveedores` (`idProveedor`, `idBodega`, `nomProveedor`, `rutProveedor`, `fonoProveedor`, `emailProveedor`, `demoradesp`) VALUES ('3', '1', 'Viña Santa Rita', '33333333-3', '912356780', 'ventas@vinasantarita.cl', '3');
+
+INSERT INTO `bdrymas`.`proveedores` (`idProveedor`, `idBodega`, `nomProveedor`, `rutProveedor`, `fonoProveedor`, `emailProveedor`, `demoradesp`) VALUES ('4', '1', 'Rymas spa', '13934742-0', '959313536', 'ventas@rymas.cl', '1');
+
+ALTER TABLE `bdrymas`.`proveedores` 
+DROP COLUMN `totalCompra`,
+DROP COLUMN `cantidad`,
+ADD COLUMN `nomProveedor` VARCHAR(25) NOT NULL AFTER `idBodega`,
+ADD COLUMN `rutProveedor` VARCHAR(12) NOT NULL AFTER `nomProveedor`,
+ADD COLUMN `fonoProveedor` VARCHAR(20) NOT NULL AFTER `rutProveedor`,
+ADD COLUMN `emailProveedor` VARCHAR(45) NOT NULL AFTER `fonoProveedor`,
+ADD COLUMN `demoradesp` INT NOT NULL AFTER `emailProveedor`;
+
+ALTER TABLE `bdrymas`.`proveedores` 
+
+DROP COLUMN `preCosto`,
+
+DROP COLUMN `idProducto`;
+
+
+UPDATE `bdrymas`.`proveedores` SET `nomProveedor` = 'Punto Latino Spa', `rutProveedor` = '11111111-1', `fonoProveedor` = '912345678', `emailProveedor` = 'puntolatino.rs@gmail.com', `demoradesp` = '3' WHERE (`idProveedor` = '1');
+
+UPDATE `bdrymas`.`proveedores` SET `nomProveedor` = 'Licores Luis Ltda.', `rutProveedor` = '22222222-2', `fonoProveedor` = '912345678', `emailProveedor` = 'moshaco.amazonico.crema@gmail.com', `demoradesp` = '1' WHERE (`idProveedor` = '2');
+
+
+

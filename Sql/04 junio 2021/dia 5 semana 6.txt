@@ -1,0 +1,47 @@
+create database pruebadb character set utf8f;
+use pruebadb;
+
+create database ejercicio2 character set utf8;
+use ejercicio2;
+create table ficha(
+id_primeraT int auto_increment,
+nombre varchar(20),
+rut varchar(10),
+estatura float,
+fechaNacimiento date,
+antecedentes text,
+primary key(id_primeraT)
+
+);
+
+create table datoslaborales(
+id_primeraT int auto_increment,
+empresa varchar(30),
+rutEmp varchar(10),
+sueldo int,
+fechaIngreso date,
+cargo varchar(20),
+funciones text,
+primary key(id_primeraT)
+);
+
+alter table ficha add column nacion varchar(15);
+
+alter table datoslaborales add column departamentoprimeratabla varchar(15);
+
+use ejercicio2;
+
+alter table ficha modify rut varchar(12);
+
+alter table datoslaborales modify rutEmp varchar(12);
+
+alter table ficha drop column antecedentes;
+
+alter table datoslaborales drop column funciones;
+
+insert into ficha (nombre,rut,estatura,fechanacimiento) values ('Diego Diaz Gonzalez','20.788.191-5',1.75,'2001-07-12');
+
+insert into ficha (nombre,rut,estatura,fechanacimiento) values ('Dinka Gonzalez Muñoz','13.934.742-0',1.58,'1979-12-01');
+
+insert into ficha (empresa,rutemp,sueldo,fechanacimiento) values ('Dinka Gonzalez Muñoz','13.934.742-0',1.58,'1979-12-01');
+
