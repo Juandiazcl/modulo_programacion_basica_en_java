@@ -1,0 +1,273 @@
+package platos2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Platos2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         Scanner leer2=new Scanner(System.in); 
+        int num,suma;
+        suma=0;
+           System.out.println ("Ingresar numero de personas:  ");
+    /*int notas=lector.nextInt();*/
+     num=leer2.nextInt();
+     if (num>300){
+         suma=num*7500;
+         System.out.println (" Su plato saldra cada uno 7.500");
+     }
+     else
+     {
+         if (num>=200 && num<=300){
+             suma=num*8500;
+         System.out.println (" Su plato saldra cada uno 8.500");
+         }
+         else
+         {
+           suma=num*9500;
+         System.out.println (" Su plato saldra cada uno 9.500");  
+         }
+     }
+     System.out.println (" El total del presupuesto es "+suma+" ");
+    }
+    }
+
+package uvas2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Uvas2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        Scanner tipouva=new Scanner(System.in); 
+        int num,valou,kuva,totalk,totalem;
+        char tipou;
+        valou=0;
+        totalk=0;
+        totalem=0;
+        System.out.println ("Ingresar tipo de Uva:  ");
+        tipou=tipouva.next().charAt(0);
+        System.out.println ("Ingresar numero de Uva:  ");
+     num=leer2.nextInt();
+     System.out.println ("Ingresar valor KG de Uva:  ");
+    /*int notas=lector.nextInt();*/
+     kuva=leer2.nextInt();
+     System.out.println ("Ingresar cantidad de Kg:  ");
+    /*int notas=lector.nextInt();*/
+     totalk=leer2.nextInt();
+     if (tipou=='A'){
+         if (num==1){
+         valou=kuva+20;
+         }
+         else
+         {
+             valou=kuva+30;
+         }
+     }
+     else
+     {
+         if (tipou=='B'){
+             
+           if (num==1){
+              valou=kuva-30;
+            }
+            else
+            {
+             valou=kuva-50;
+            }
+         }
+         else
+         {
+          
+         System.out.println ("Tipo de uva no valido");  
+         }
+     }
+    
+     totalem=totalk*valou;
+     System.out.println (" El valor del KG de uva es "+valou+" Total embarque  "+totalem);
+    }
+    
+}
+
+package viajedeestudio;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Viajedeestudio {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in);  
+        int num,numalum,totalv;
+        System.out.println (" Elija Opciones de Presupuesto:  ");
+        System.out.println ("1- De 30 a 49 $ 9.500  ");
+        System.out.println ("2- De 50 a 99 $ 7.000  ");
+         System.out.println ("3- Sobre 100 $ 6.500  ");
+         num=leer2.nextInt();
+        System.out.println ("Ingresar numero de alumnos:  ");
+     numalum=leer2.nextInt();
+  
+     switch (num) {
+         case 1:
+         totalv=numalum*6500;
+         break;
+         case 2:
+         totalv=numalum*7000;
+         break;
+         case 3:
+         totalv=numalum*6500;
+         break;
+        default:
+          totalv=400000; 
+          break;
+     }
+     System.out.println ("Total x viaje $ "+totalv);
+    }
+}
+    
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package viajedeestudio;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Viajedeestudio {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in);  
+        int num,numalum,totalv;
+        System.out.println (" Elija Opciones de Presupuesto:  ");
+        System.out.println ("1- De 30 a 49 $ 9.500  ");
+        System.out.println ("2- De 50 a 99 $ 7.000  ");
+         System.out.println ("3- Sobre 100 $ 6.500  ");
+         num=leer2.nextInt();
+        System.out.println ("Ingresar numero de alumnos:  ");
+     numalum=leer2.nextInt();
+  
+     switch (num) {
+         case 1:
+         totalv=numalum*6500;
+         break;
+         case 2:
+         totalv=numalum*7000;
+         break;
+         case 3:
+         totalv=numalum*6500;
+         break;
+        default:
+          totalv=400000; 
+          break;
+     }
+     System.out.println ("Total x viaje $ "+totalv);
+    }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iteracion;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class ITERACION {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i,num;
+        i=1;
+        System.out.println ("Ingresar cantidad de numeros:  ");
+        num=leer2.nextInt();
+  do {
+      System.out.println(i);
+      i +=1;
+              }
+              while (i<=num);
+ 
+    }
+    
+}
+
+* To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package promedioiter;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Promedioiter {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i;
+        float num,notita,promedio;
+        promedio=0;
+        i=1;
+        System.out.println ("Ingresar cantidad de notas  ");
+        num=leer2.nextFloat();
+  do {
+      System.out.println("Ingresa nota "+i);
+      notita=leer2.nextFloat();
+      promedio=promedio+notita;
+      i +=1;
+  }
+              while (i<=num);
+          promedio=promedio/num;
+          System.out.println ("Promedio de notas : "+promedio);
+    }
+    
+}

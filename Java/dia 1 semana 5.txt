@@ -1,0 +1,138 @@
+package clase2;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Hola
+ */
+public class TipoNum {
+    float num;
+    
+    public float numValida(float a)
+    {
+        if (a>=0)
+            System.out.println("Numero es positivo.");
+        else
+           System.out.println("Numero es negativo."); 
+        return a;
+    }
+    }
+
+package clase2;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Hola
+ */
+public class Operaciones {
+    float num1;
+    float num2;
+    
+    public float suma(float a, float b){
+        float sum;
+    sum=a+b;
+    return sum;
+            }
+    public float resta(float a, float b){
+        float sum;
+    sum=a-b;
+    return sum;
+            }
+    public float multiplica(float a, float b){
+        float sum;
+    sum=a*b;
+    return sum;
+            }
+    public float divide(float a, float b){
+        float sum;
+    sum=a/b;
+    return sum;
+            }
+}
+
+
+package clase2;
+
+
+import java.util.Scanner;
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Hola
+ */
+public class clasej {
+    String nombre;
+    String rut;
+    Scanner leer;
+    int edad;
+    
+    public void ingreso(){
+       leer=new Scanner(System.in); 
+        System.out.println ("Ingrese nombre ");
+        nombre=leer.next();
+        System.out.println ("Ingrese Rut ");
+        rut=leer.next();
+        System.out.println ("Ingrese Edad ");
+        edad=leer.nextInt();
+    }
+    public void imprimir(){
+        System.out.println ("Ficha:");
+      System.out.println ("Nombre "+nombre);
+        System.out.println ("Ingrese Rut "+rut);
+        System.out.println ("Ingrese Edad "+edad);  
+    }
+    }
+ */
+package clase2;
+
+/**
+ *
+ * @author Hola
+ */
+public class Clase2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        clasej c1 = new clasej();
+        float opera;
+        c1.ingreso();
+        c1.imprimir();
+        Operaciones c2=new Operaciones();
+        opera = c2.suma(5, 2);
+        System.out.println("Resultado "+opera);
+        TipoNum c3 = new TipoNum();
+        c3.numValida(opera);
+        
+  
+        // TODO code application logic here
+    }
+    
+}
+
+********** REFLEXION  **************************
+
+Este nuevo paradigma, lleva a algo que nos interesa como sociedad, que es reutilizar
+o reciclar, en este caso es reciclar codigo. por ello, es muy interesante el paradigma de
+programación orientada a objeto. esperamos seguir aprendiendo.
+

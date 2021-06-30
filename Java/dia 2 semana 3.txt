@@ -1,0 +1,59 @@
+numeros de cita
+
+inicio
+numcita=0
+valtrat=0
+escribe "ingrese el num. de cita:"
+leer numcita
+segun numcita hacer
+numcita<=3
+valtrat=numcita*200
+numcita>3 y numcita<=5
+valtrat=(numcita*150)+150
+numcita>5 y numcita<=8
+valtrat=(numcita*100)+250
+de otro modo
+valtrat=(numcita*50)+800
+fin segun
+escribe "valor total de tratamiento", valtrat
+fin
+
+el cometa
+
+inicio
+clave=0
+cprod=0
+pvta=0
+mobra=0
+gfab=0
+escribe "ingrese clave producto:"
+leer clave
+escribe "ingrese valor materia prima:"
+leer mprima
+segun 
+clave=1 hacer
+mobra=mprima+(mprima*0,8)
+gfab=mprima+(mprima*0,28)
+clave=2 hacer
+mobra=mprima+(mprima*0,85)
+gfab=mprima+(mprima*0,30)
+clave=3 hacer
+mobra=mprima+(mprima*0,75)
+gfab=mprima+(mprima*0,35)
+clave=4 hacer
+mobra=mprima+(mprima*0,75)
+gfab=mprima+(mprima*0,28)
+clave=5 hacer
+mobra=mprima+(mprima*0,80)
+gfab=mprima+(mprima*0,30)
+clave=6 hacer
+mobra=mprima+(mprima*0,85)
+gfab=mprima+(mprima*0,35)
+fin segun
+cprod=mprima+mobra+gfab
+pvta=cprod+(cprod*0,45)
+escribe "costo de produccion:", cprod
+escribe "precio de venta: ", pvta
+fin
+
+

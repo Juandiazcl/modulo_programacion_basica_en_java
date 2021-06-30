@@ -1,0 +1,50 @@
+**** reflexion: excelente la programacion en android studio pero necesitamos el emulador en la maquina virtual.
+
+package com.example.appradio;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText eText1, eText2;
+    private TextView tvResul;
+    private RadioButton rBoton1, rBoton2, rBoton3, rBoton4;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        eText1=findViewById(R.id.eTexto);
+        eText2=findViewById(R.id.eTexto2);
+        tvResul=findViewById(R.id.tvResultados;
+        rBoton1=findViewById(R.id.rBot1);
+        rBoton2=findViewById(R.id.rBot2);
+        rBoton3=findViewById(R.id.rBot3);
+        rBoton4=findViewById(R.id.rBot4);
+
+    }
+    public void operaciones(View v) {
+        int valor1 = integer.parseInt(eText1.getText().toString());
+        int valor2 = integer.parseInt(eText2.getText().toString());
+        if (rBoton1.isChecked() == true) {
+            int suma = valor1 + valor2;
+            tvresul.setText("El resultado de la suma es:" + suma);
+        } else if (rBoton2.isChecked() == true) {
+            int resta = valor1 - valor2;
+            tvresul.setText("El resultado de la resta es:" + resta);
+        } else if (rBoton3.isChecked() == true) {
+            int multi = valor1 * valor2;
+            tvresul.setText("El resultado de la multiplicación es:" + multi);
+        } else if (rBoton4.isChecked() == true) {
+            if (valor1!= 0 && valor2!=0) {
+                int divi = valor1 / valor2;
+                tvresul.setText("El resultado de la divición es:" + divii);
+            }
+        }
+    }
+}

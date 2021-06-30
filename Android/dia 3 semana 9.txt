@@ -1,0 +1,47 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText eText1, eText2;
+    private TextView tvResul;
+    private CheckBox check1, check2, check3, check4;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        eText1=findViewById(R.id.eTexto1);
+        eText2=findViewById(R.id.eTexto2);
+        tvResul=findViewById(R.id.tvResultado);
+        check1=findViewById(R.id.checkBox);
+        check2=findViewById(R.id.checkBox2);
+        check3=findViewById(R.id.checkBox3);
+        check4=findViewById(R.id.checkBox4);
+
+    }
+    public void Operaciones(View v) {
+        int valor1 = Integer.parseInt(eText1.getText().toString());
+        int valor2 = Integer.parseInt(eText2.getText().toString());
+        if (check1.isChecked()){
+            int suma = valor1 + valor2;
+            tvResul.setText("El resultado de la suma es:" + suma);
+        }else if (check2.isChecked()){
+            int resta = valor1 - valor2;
+            tvResul.setText("El resultado de la resta es:" + resta);
+        }else if (check3.isChecked()){
+            int multi = valor1 * valor2;
+            tvResul.setText("El resultado de la multiplicación es:" + multi);
+        }else if (valor1 != 0 && valor2 != 0) {
+            int divi = valor1 / valor2;
+            tvResul.setText("El resultado de la divición es:" + divi);
+        }
+    }
+    }

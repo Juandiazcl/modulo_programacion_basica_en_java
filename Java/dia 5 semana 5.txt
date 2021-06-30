@@ -1,0 +1,286 @@
+/*
+ * Reflexion: Hoy aprendimos polimorfismo y herencia, 2 conceptos para completar la programacion orientada a objeto. Me parece genial el reciclaje de codigo. Gran enseñanza.
+ */
+package bancoclase;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class bancoclasec {
+    private String nombre;
+    private String cuenta;
+    private double saldo;
+    
+    public void setNombre(String nombre){
+    this.nombre = nombre;
+}
+    public String getNombre(){
+    return this.nombre; 
+}
+    public void setCuenta(String cuenta){
+    this.cuenta = cuenta;
+}
+    public String getCuenta(){
+    return this.cuenta; 
+}
+    public void setSaldo(double saldo){
+    this.saldo = saldo;
+}
+    public double getSaldo(){
+    return this.saldo; 
+}
+    public bancoclasec(String nombre, String cuenta, double saldo)
+    {
+     this.nombre=nombre;
+     this.cuenta=cuenta;
+     this.saldo=saldo;
+     
+    }
+    public double deposito (double saldo)
+    {
+    double aux,sf;
+    Scanner leer2;
+    leer2=new Scanner(System.in); 
+    sf=saldo;
+        System.out.println("Ingrese monto del deposito:");
+        aux=leer2.nextDouble();
+        if(aux<=0)
+            System.out.println("Monto menor a 0");
+        else
+            sf=saldo+aux;
+    return sf;   
+    }
+    public double giro (double saldo)
+    {
+    double aux,sf;
+    Scanner leer2;
+    leer2 = new Scanner(System.in); 
+        sf=saldo;
+        System.out.println("Ingrese monto del giro:");
+        aux=leer2.nextDouble();
+        if(aux<=0)
+            System.out.println("Monto menor a 0");
+        if (saldo<aux)
+             System.out.println("Saldo insuficiente");
+        else {  
+        sf=saldo-aux;
+        }
+       
+    return sf;   
+    }
+   public double transferir (double saldo)
+    {
+    String _nombre,_cuenta;    
+    double aux,sf;
+    Scanner leer2;
+    leer2 = new Scanner(System.in); 
+        sf=saldo;
+        System.out.println ("Ingrese Datos de Transferencia ");
+        System.out.println ("Ingrese nombre ");
+        _nombre=leer2.next();
+        System.out.println ("Ingrese Cuenta ");
+        _cuenta=leer2.next();
+         System.out.println("Ingrese monto:");
+        aux=leer2.nextDouble();
+        if(aux<=0)
+            System.out.println("Monto menor a 0");
+        if (saldo<aux) 
+             System.out.println("Saldo insuficiente");
+        else 
+          sf=saldo-aux; 
+    return sf;   
+    } 
+}
+
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bancoclase;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Bancoclase {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       String _nombre,_cuenta;
+       Scanner leer;
+        double _saldo, nsaldo;
+        int op;
+         leer=new Scanner(System.in); 
+        System.out.println ("Digital Bank ");
+        System.out.println ("Ingrese nombre ");
+        _nombre=leer.next();
+        System.out.println ("Ingrese Cuenta ");
+        _cuenta=leer.next();
+        System.out.println ("Ingrese Saldo: ");
+        _saldo=leer.nextDouble();
+   bancoclasec c1 = new bancoclasec(_nombre,_cuenta,_saldo);
+   nsaldo=_saldo;
+   do {
+   System.out.println ("Operación a realizar: 1.- Deposito  2.- Giro 3.- Transferencia  4.- Salir ");
+        op=leer.nextInt();
+     if (op==1)
+         nsaldo=c1.deposito(nsaldo);
+     if (op==2)
+         nsaldo=c1.giro(nsaldo);
+     if (op==3)
+        nsaldo=c1.transferir(nsaldo);
+     System.out.println ("Nuevo Saldo "+nsaldo);
+   }
+     while (op!=4);
+             }
+    
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package biblioteca;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class biblioclase {
+   private String titulo;
+    private String autor;
+    private double numlib;
+    private double numlibpres;
+    
+    public void setTitulo(String titulo){
+    this.titulo = titulo;
+}
+    public String getTitulo(){
+    return this.titulo; 
+}
+    public void setAutor(String autor){
+    this.autor = autor;
+}
+    public String getAutor(){
+    return this.autor; 
+}
+    public void setNumlib(double numlib){
+    this.numlib = numlib;
+}
+    public double getNumlib(){
+    return this.numlib; 
+}
+    public void setNumlibpres(double numlibpres){
+    this.numlibpres = numlibpres;
+}
+    public double getNumlibpres(){
+    return this.numlibpres; 
+}
+    public biblioclase(String titulo, String autor, double numlib, double numlibpres )
+    {
+     this.titulo = titulo;
+     this.autor = autor;
+     this.numlib = numlib;
+     this.numlibpres = numlibpres;
+     
+    } 
+    public double devolucion (double saldo,double numlibp)
+    {
+    double aux,sf;
+    Scanner leer2;
+    leer2=new Scanner(System.in); 
+    sf=saldo;
+        System.out.println("Cantidad de libros devueltos");
+        aux=leer2.nextDouble();
+        if(aux<=0)
+            System.out.println("Ingreso menor a 0");
+        else
+            if (aux>numlibp)
+                System.out.println("CAntidad devuelta mayot a cantidad prestada, ERROR");
+                else
+            sf=saldo+aux;
+    return sf;   
+    }
+    public double prestamo (double saldo)
+    {
+    double aux,sf;
+    Scanner leer2;
+    leer2 = new Scanner(System.in); 
+        sf=saldo;
+        System.out.println("Cantidad de libros a prestar:");
+        aux=leer2.nextDouble();
+        if(aux<=0)
+            System.out.println("Ingreso menor a 0");
+        if (saldo<aux)
+             System.out.println("No hay esa cantidad de libros para prestar");
+        else {  
+        sf=saldo-aux;
+        }
+        return sf;
+    }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package biblioteca;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Biblioteca {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+            
+        // TODO code application logic here
+       String _titulo,_autor;
+       Scanner leer;
+        double _numlib, _numlibp, nsaldo;
+        int op;
+         leer=new Scanner(System.in); 
+        System.out.println ("Biblioteca Digital ");
+        System.out.println ("Ingrese Titulo ");
+        _titulo=leer.next();
+        System.out.println ("Ingrese autor ");
+        _autor=leer.next();
+        System.out.println ("Ingrese Numero de libros actual: ");
+        _numlib=leer.nextDouble();
+        System.out.println ("Ingrese Numero de libros prestados actualmente: ");
+        _numlibp =leer.nextDouble();
+   biblioclase c1 = new biblioclase(_titulo,_autor,_numlib,_numlibp);
+   nsaldo=_numlib;
+   do {
+   System.out.println ("Operación a realizar: 1.- Prestamo  2.- Devolución 3.- Salir ");
+        op=leer.nextInt();
+     if (op==1)
+         nsaldo=c1.prestamo(nsaldo);
+     if (op==2)
+         if (_numlibp==0)
+             System.out.println ("No hay libros prestados.");
+             else
+         nsaldo=c1.devolucion(nsaldo,_numlibp);
+         System.out.println ("Quedan Libros :"+nsaldo);
+   }
+     while (op!=3);
+             }
+    }
+    

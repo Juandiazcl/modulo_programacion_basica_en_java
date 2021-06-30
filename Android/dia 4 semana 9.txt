@@ -1,0 +1,73 @@
+
+**** Reflexion: Seguimos explorando Android studio, descubriendo todo su potencial.
+public class MainActivity extends AppCompatActivity {
+    private Switch s1,s2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        s1=findViewById(R.id.switch1);
+        s2=findViewById(R.id.switch2);
+    }
+    public void saludar (View v){
+        if (s1.isChecked()){
+            Toast.makeText(this, "Hola como estas?",Toast.LENGTH_LONG).show();
+        }
+    }
+    public void despedida (View v){
+        if (s2.isChecked()){
+            Toast.makeText(this, "Adios",Toast.LENGTH_LONG).show();
+        }
+    }
+}
+
+package com.example.appspinner;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private Spinner sp1;
+    private EditText ed1,ed2;
+    private TextView tv1;
+    private String[] operaciones={"Sumar","Restar","Multiplicar","Dividir"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ed1=findViewById(R.id.editText);
+        ed2=findViewById(R.id.editText2);
+        tv1=findViewById(R.id.TextView);
+        sp1=findViewById(R.id.spinner);
+
+        ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,operaciones);
+        sp1.setAdapter(adaptador);
+    }
+    public void operar(View v){
+        int valor1 = Integer.parseInt(ed1.getText().toString());
+        int valor2 = Integer.parseInt(ed2.getText().toString());
+        String op=sp1.getSelectedItem().toString();
+
+        if (op.equals("Sumar")){
+            int suma = valor1 + valor2;
+            tv1.setText("El resultado de la suma es:" + suma);
+        }else if (op.equals("Restar")){
+            int resta = valor1 - valor2;
+            tv1.setText("El resultado de la resta es:" + resta);
+        }else if (op.equals("Multiplicar")){
+            int multi = valor1 * valor2;
+            tv1.setText("El resultado de la multiplicación es:" + multi);
+        }else if (valor1 != 0 && valor2 != 0) {
+            int divi = valor1 / valor2;
+            tv1.setText("El resultado de la divición es:" + divi);
+        }
+    }
+}

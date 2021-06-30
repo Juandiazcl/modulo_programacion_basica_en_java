@@ -1,0 +1,222 @@
+
+ *reflexion: hoy aprendimos y repasamos la herencia y polimorfismo y el beneficio de las clases abstractas,
+lo cual nos muestra el beneficio de a reutilizacion de codigo de la prog orientada a obejeto.
+ */
+package electrodomestico;
+
+/**
+ *
+ * @author Hola
+ */
+public class electrodomesticocl {
+ private String marca;
+    private String modelo;
+    private double garantia;
+
+    
+    public void setMarca(String marca){
+    this.marca = marca;
+}
+    public String getMarca(){
+    return this.marca; 
+}
+    public void setModelo(String modelo){
+    this.modelo = modelo;
+}
+    public String getModelo(){
+    return this.modelo; 
+}   
+    public void setGarantia(double garantia){
+    this.garantia = garantia;
+}
+    public double getGarantia(){
+    return this.garantia; 
+    }  
+    
+    public electrodomesticocl(String marca, String modelo, double garantia) {
+    this.marca = marca;
+     this.modelo = modelo;
+     this.garantia = garantia;
+     
+     
+}
+    public void mostrarCarac()
+    {
+        System.out.println ("Marca : "+getMarca());
+        System.out.println ("Marca : "+getModelo());
+        System.out.println ("Garantia en año : "+getGarantia());
+        
+    }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package electrodomestico;
+
+/**
+ *
+ * @author Hola
+ */
+public class lavadoraCl extends electrodomesticocl{
+   private double kgcarga;
+   private double precosto;
+   
+   
+   public lavadoraCl (String marca, String modelo, double garantia, double kgcarga, double precosto){
+       super(marca,modelo,garantia);
+       this.kgcarga = kgcarga;
+     this.precosto = precosto;  
+   }
+   
+ public void setkgcarga(double kgcarga){
+    this.kgcarga = kgcarga;
+}
+    public double getKgcarga(){
+    return this.kgcarga; 
+    }  
+    public void setPrecosto(double precosto){
+    this.precosto = precosto;
+}
+    public double getPrecosto(){
+    return this.precosto; 
+    }  
+   @Override
+   public void mostrarCarac(){
+       System.out.println ("Marca : "+getMarca());
+        System.out.println ("Marca : "+getModelo());
+        System.out.println ("Garantia en año : "+getGarantia());
+       System.out.println("Kilos de carga "+getKgcarga()); 
+       System.out.println("Kilos de carga "+getPrecosto());
+   }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package electrodomestico;
+
+/**
+ *
+ * @author Hola
+ */
+public class refigeradorcl extends electrodomesticocl{
+    private double gastoenergia;
+   private double precosto;
+   /*super(marca,modelo,garantia);*/
+   
+   public refigeradorcl (String marca, String modelo, double garantia, double gastoenergia, double precosto){
+       super(marca,modelo,garantia);
+       this.gastoenergia = gastoenergia;
+     this.precosto = precosto;  
+   }
+   
+ public void setGastoenergia(double gastoenergia){
+    this.gastoenergia = gastoenergia;
+}
+    public double getGastoenergia(){
+    return this.gastoenergia; 
+    }  
+    public void setPrecosto(double precosto){
+    this.precosto = precosto;
+}
+    public double getPrecosto(){
+    return this.precosto; 
+    }  
+   @Override
+   public void mostrarCarac(){
+       System.out.println ("Marca : "+getMarca());
+        System.out.println ("Marca : "+getModelo());
+        System.out.println ("Garantia en año : "+getGarantia());
+       System.out.println("Kilos de carga "+getGastoenergia()); 
+       System.out.println("Kilos de carga "+getPrecosto());
+   }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package electrodomestico;
+
+/**
+ *
+ * @author Hola
+ */
+public class hornoelec extends electrodomesticocl{
+private double btuCalor;
+   private double precosto;
+   
+   
+   public hornoelec (String marca, String modelo, double garantia, double btuCalor, double precosto){
+       super(marca,modelo,garantia);
+       this.btuCalor = btuCalor;
+     this.precosto = precosto;  
+   }
+   
+ public void setbtuCalor(double btuCalor){
+    this.btuCalor = btuCalor;
+}
+    public double getbtuCalor(){
+    return this.btuCalor; 
+    }  
+    public void setPrecosto(double precosto){
+    this.precosto = precosto;
+}
+    public double getPrecosto(){
+    return this.precosto; 
+    }  
+   @Override
+   public void mostrarCarac(){
+       System.out.println ("Marca : "+getMarca());
+        System.out.println ("Marca : "+getModelo());
+        System.out.println ("Garantia en año : "+getGarantia());
+       System.out.println("Btu de Calor "+getbtuCalor()); 
+       System.out.println("Precio de Costo "+getPrecosto());
+   }
+   public double calcularPrevta (double porcUtilidad)
+           {
+               return getPrecosto()*(1+(porcUtilidad*0.01));
+           }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package electrodomestico;
+
+/**
+ *
+ * @author Hola
+ */
+public class Electrodomestico {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        double i,pvta;
+        i=1;
+        electrodomesticocl c1 = new electrodomesticocl("Samsung","Hogar",i);
+        System.out.println("Prueba");
+        c1.mostrarCarac();
+        lavadoraCl c2= new lavadoraCl("Samsung","Hogar",i,13,50);
+        System.out.println("Prueba 2");
+        c2.mostrarCarac();
+        hornoelec c3= new hornoelec("Samsung","Hogar",i,1500,50000);
+        System.out.println("Prueba 3");
+        c3.mostrarCarac();
+        pvta=c3.calcularPrevta(30);
+        System.out.println("Precio de venta, con utilidad de 30 es:"+pvta);
+    }
+    
+}

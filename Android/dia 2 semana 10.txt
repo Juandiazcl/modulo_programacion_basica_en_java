@@ -1,0 +1,63 @@
+**** Reflexion: con el paso de parametros de los activity, se empieza a vislumbrar muchas posibilidades
+**** en la programación.
+
+package com.example.apprymas;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private Button b1;
+    private TextView t1;
+    private EditText edc,edp;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        b1=findViewById(R.id.button);
+        t1=findViewById(R.id.textView);
+        edc=findViewById(R.id.editText3);
+        edp=findViewById(R.id.editText2);
+    }
+    public void siguiente(View v){
+        Intent i = new Intent(this,Main2principal.class);
+        i.putExtra("correo",edc.getText().toString());
+        i.putExtra("pass",edp.getText().toString());
+        startActivity(i);
+    }
+}
+
+package com.example.apprymas;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class Main2principal extends AppCompatActivity {
+
+    private TextView tvt,tvr;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2principal);
+        tvt=findViewById(R.id.textView2);
+        tvr=findViewById(R.id.textView3);
+        String valor=getIntent().getStringExtra("correo");
+        tvr.setText("Correo: "+valor);
+        
+    }
+    public void volver(View v) {
+        Intent vol = new Intent(this, MainActivity.class);
+        startActivity(vol);
+    }
+}

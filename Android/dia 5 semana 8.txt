@@ -1,0 +1,53 @@
+package com.example.appimage;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText e1,12;
+    private TextView r1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        e1=findViewById(R.id.eval1);
+        e2=findViewById(R.id.eval2);
+        r1=findViewById(R.id.rtext1);
+    public voif Presion1(View v){
+        Toast.makeText(context this, )
+    }
+    public void sumar(View v) {
+        int valor1 = integer.parseInt(e1.getText().toString());
+        int valor2 = integer.parseInt(e2.getText().toString());
+
+        int sum = valor1 + valor2;
+        r1.setText("El resultado "+sum);
+    }
+    public void resta(View v) {
+        int valor1 = integer.parseInt(e1.getText().toString());
+        int valor2 = integer.parseInt(e2.getText().toString());
+
+        int res = valor1 - valor2;
+        r1.setText("El resultado "+res);
+    }
+    public void multiplicar(View v) {
+        int valor1 = integer.parseInt(e1.getText().toString());
+        int valor2 = integer.parseInt(e2.getText().toString());
+
+        int mul = valor1 * valor2;
+        r1.setText("El resultado "+mul);
+    }
+    public void dividir(View v) {
+        int valor1 = integer.parseInt(e1.getText().toString());
+        int valor2 = integer.parseInt(e2.getText().toString());
+
+        int divi = valor1 / valor2;
+        r1.setText("El resultado "+divi);
+    }
+}

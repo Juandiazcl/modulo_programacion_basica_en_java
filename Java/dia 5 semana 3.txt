@@ -1,0 +1,190 @@
+package multiplo9;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Multiplo9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i;
+        float num,promedio;
+        promedio=0;
+        i=1;
+        System.out.println ("Ingresar cantidad de notas  ");
+        num=leer2.nextFloat();
+  do {
+      if (i % 9 ==0){
+      promedio=promedio+i;
+      }
+      i +=1;
+  }
+              while (i<=num);
+          System.out.println ("Suma de multiplos de 9 : "+promedio);
+    }
+    }
+
+package multinumprimos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Multinumprimos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+/*int num, i, multi = 1;
+Scanner iN = new Scanner(System.in);
+
+System.out.println("Multiplo Primo ciclo For");
+
+System.out.println("Ingrese numero mayor a 0; ");
+num = iN.nextInt();
+
+for(i = 2; i < num; i++){
+if (num % i == 0){
+multi=multi*i;
+System.out.println(i);
+}
+}
+System.out.println("Los multiplicacion de primos es: " + multi); */
+
+
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i,contador;
+        float num,promedio;
+        promedio=1;
+        contador=2;
+        boolean primo=true;
+        i=2;
+        System.out.println ("Ingresar cantidad de numero a analizar: (rango)  ");
+        num=leer2.nextFloat();
+  do {
+     while ((primo) && (contador!=i)){
+  if (i % contador == 0 && i!=num && i!=1){
+    primo = false;   
+  }
+  contador++;  
+}
+     System.out.println (primo);
+     
+        if (primo== true){
+            promedio=promedio*i;
+           System.out.println (i); 
+           contador=2;
+           
+        }
+        else
+        {
+            primo= true;
+        }
+      i +=1;
+  }
+              while (i<=num);
+          System.out.println ("Multiplicacion de num. primos : "+promedio);
+    }
+    
+}
+
+package multiplox;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Multiplox {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i;
+        float num,promedio,num2;
+        promedio=0;
+        i=1;
+        System.out.println ("Ingresar cantidad de numeros  ");
+        num=leer2.nextFloat();
+        System.out.println ("Ingrese multiplos a ver:  ");
+        num2=leer2.nextFloat();
+  do {
+      if (i % num2 ==0){
+      promedio=promedio+1;
+      }
+      i +=1;
+  }
+              while (i<=num);
+          System.out.println ("Cantidad de multiplos de "+num2+" : "+promedio);
+    }
+    
+}
+
+package paresyimpares;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hola
+ */
+public class Paresyimpares {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer2=new Scanner(System.in); 
+        int i;
+        float num,npar,nimp,sumap,sumai;
+        npar=0;
+        nimp=0;
+        sumap=0; sumai=0;
+        i=1;
+        System.out.println ("Ingresar cantidad de numeros  ");
+        num=leer2.nextFloat();
+       
+  do {
+      if (i % 2 ==0){
+      npar=npar+1;
+      sumap=sumap+i;
+      }
+      else
+      {
+          nimp=nimp+1;
+          sumai=sumai+i;
+      }
+       
+      i +=1;
+  }
+              while (i<=num);
+              if (npar>nimp){
+                  System.out.println ("numeros pares son mayores");
+              }
+              else
+              {
+                  System.out.println ("numeros impares son mayores");
+              }
+              
+          System.out.println ("Suma de de pares "+sumap+" Impares "+sumai);
+          System.out.println ("Pares "+npar+" Impares "+nimp);
+    }
+    
+}
